@@ -45,9 +45,6 @@ public class RenteApp extends Application {
         spaarSlider.setShowTickLabels(true);
         spaarSlider.setShowTickMarks(true);
 
-        //aanmaken HashMap voor gebruik berekening opbouwende rente
-        Map<Double, Double> opgespaardVermogen = new HashMap<>();
-
         //2.0.1 listener om slider en chart interactief te maken
         spaarSlider.valueProperty().addListener(new ChangeListener<Number>() {
 
@@ -58,12 +55,11 @@ public class RenteApp extends Application {
 
                 dataSpaar.getData().clear();
 
-                for (double i = 0; i < 30; i++) {
+                for (double i = 0; i <= 30; i++) {
 
                     Double som = (Double) newValue * 12 * i;
                     dataSpaar.getData().add(new XYChart.Data(i, som));
 
-                    opgespaardVermogen.put(i, som);
                 }
             }
         });
@@ -86,17 +82,20 @@ public class RenteApp extends Application {
             public void changed(ObservableValue<? extends Number> observableValue, Number oldValue, Number newValue) {
                 renteValue.setText(String.format("%.2f", newValue));
 
+                Double rentePerJaar = ((((Double) newValue) / 100 + 1));
+                Double jaarEerder = 0.0;
+
                 dataRente.getData().clear();
 
-                for (double i = 0; i < 30; i++) {
-                    Double gespaardVermogenPerJaar = opgespaardVermogen.get(i);
-                    Double rentePerJaar = ((((Double) newValue) / 100 + 1));
-                    Double macht = Math.pow(rentePerJaar, i);
+                for (double i = 0; i <= 30; i++) {
+                    jaarEerder += spaarSlider.getValue() * 12;
+                    jaarEerder *= rentePerJaar;
 
-                    Double totaal = gespaardVermogenPerJaar * macht;
+                    if (i == 0) {
+                        jaarEerder = i;
+                    }
 
-                    dataRente.getData().add(new XYChart.Data(i, totaal));
-
+                    dataRente.getData().add(new XYChart.Data(i, jaarEerder));
                 }
             }
         });

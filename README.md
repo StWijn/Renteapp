@@ -30,4 +30,4 @@ Version:
 
 press next -> next -> finish
 
-Now copy code in Renteapp.java to App.java located in your project. Make sure you change the package name on line 1 to the corresponding package and change classname on line 17 and 19. You can now run the application.
+Now copy code in Renteapp.java to App.java located in your project. Make sure you change the package name on line 1 to the corresponding package and change classname on line 17 and 20. You can now run the application.

@@ -11,7 +11,7 @@ An interactive application to calculate savings and compounding interest. Adjust
 ![Renteapp](https://i.imgur.com/Q4a6u3C.png)
 
 
-### Set-up
+## Set-up
 
 The easiest way to run Renteapp, and to avoid any bothersome missing JavaFX depency errors, is setting up a simple project in IntelliJ. 
 

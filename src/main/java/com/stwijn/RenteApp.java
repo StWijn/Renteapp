@@ -1,10 +1,8 @@
 package com.stwijn;
 
-import java.util.HashMap;
-import java.util.Map;
 import javafx.application.Application;
-import javafx.beans.value.ObservableValue;
 import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.chart.LineChart;
@@ -51,7 +49,6 @@ public class RenteApp extends Application {
             @Override
             public void changed(ObservableValue<? extends Number> observableValue, Number oldValue, Number newValue) {
                 spaarValue.setText(String.format("%.2f", newValue));
-                //spaarValue.textProperty().setValue(String.valueOf(newValue));
 
                 dataSpaar.getData().clear();
 
@@ -59,7 +56,6 @@ public class RenteApp extends Application {
 
                     Double som = (Double) newValue * 12 * i;
                     dataSpaar.getData().add(new XYChart.Data(i, som));
-
                 }
             }
         });
@@ -130,5 +126,4 @@ public class RenteApp extends Application {
         scherm.setScene(scene);
         scherm.show();
     }
-
 }

@@ -5,7 +5,7 @@ STeps
 
 The easiest way to run Renteapp, and to avoid any missing JavaFx depencies, is setting up a simple project in IntelliJ
 
-File -> new -> module -> check box create from archetype -> add Archetype 
+File -> new -> project -> click on Maven -> check box create from archetype ->  add Archetype 
 
 fill in
 
@@ -17,6 +17,10 @@ ArtficatId:
 
 Version:   
 > 0.0.3
+
+press next -> next -> finish
+
+Now copy code in Renteapp.java to App.java located in your project. Make sure you change the package name on line 1
 
 
 

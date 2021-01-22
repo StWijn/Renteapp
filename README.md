@@ -5,7 +5,7 @@ An interactive application to calculate savings and compounding interest. Adjust
 ## Tech
 
 *Used:* IntelliJ, JavaFX, Maven, Java 11
-
+*Screenshot*
 ![Renteapp](https://i.imgur.com/Q4a6u3C.png)
 
 

@@ -17,7 +17,7 @@ The easiest way to run Renteapp, and to avoid any bothersome missing JavaFX depe
 
 File -> new -> project -> click on Maven -> check box create from archetype ->  add Archetype 
 
-fill in
+*Now fill in the following:*
 
  GroupId:    
  > org.openjfx
@@ -30,11 +30,4 @@ Version:
 
 press next -> next -> finish
 
-Now copy code in Renteapp.java to App.java located in your project. Make sure you change the package name on line 1 to the corresponding package and change classname on line 17 and 19. Now you can run the application.
-
-
-
-- [x] @mentions, #refs, [links](), **formatting**, and <del>tags</del> supported
-- [x] list syntax required (any unordered or ordered list supported)
-- [x] this is a complete item
-- [ ] this is an incomplete item
+Now copy code in Renteapp.java to App.java located in your project. Make sure you change the package name on line 1 to the corresponding package and change classname on line 17 and 19. You can now run the application.

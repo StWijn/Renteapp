@@ -9,11 +9,14 @@ File -> new -> module -> check box create from archetype -> add Archetype
 
 fill in
 
-> GroupId:    org.openjfx
+ GroupId:    
+ > org.openjfx
 
-> ArtficatId: javafx-archetype-simple
+ArtficatId: 
+> javafx-archetype-simple
 
-> Version:    0.0.3
+Version:   
+> 0.0.3
 
 
 

@@ -13,7 +13,7 @@ An interactive application to calculate savings and compounding interest. Adjust
 
 ## Set-up
 
-The easiest way to run Renteapp, and to avoid any bothersome missing JavaFX depency errors, is setting up a simple project in IntelliJ. 
+The easiest way to run Renteapp, and to avoid any bothersome missing JavaFX depency errors, is setting up a simple Maven project in IntelliJ. 
 
 File -> new -> project -> click on Maven -> check box create from archetype ->  add Archetype 
 

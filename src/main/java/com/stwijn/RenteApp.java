@@ -48,7 +48,6 @@ public class RenteApp extends Application {
 
             @Override
             public void changed(ObservableValue<? extends Number> observableValue, Number oldValue, Number newValue) {
-
                 final double valueAfgerond = Math.floor(newValue.doubleValue() / 7.50 ) * 7.50;
                 spaarSlider.valueProperty().set(valueAfgerond);
                 spaarValue.setText(String.format("%.2f", valueAfgerond));
@@ -58,7 +57,6 @@ public class RenteApp extends Application {
                 for (double i = 0; i <= 30; i++) {
                     Double som = (Double) newValue * 12 * i;
                     dataSpaar.getData().add(new XYChart.Data(i, som));
-
                 }
             }
         });
@@ -80,7 +78,6 @@ public class RenteApp extends Application {
             @Override
             public void changed(ObservableValue<? extends Number> observableValue, Number oldValue, Number newValue) {
                 renteValue.setText(String.format("%.2f", newValue));
-
                 Double rentePerJaar = ((((Double) newValue) / 100 + 1));
                 Double jaarEerder = 0.0;
 

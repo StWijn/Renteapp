@@ -2,7 +2,12 @@
 
 An interactive application to calculate savings and compounding interest. Adjusting the sliders allows you to change the amount of € that you want to save each month, and the interest rate on your accumulated savings. From the graph you can interpret what your savings would be either with interest and without interest. You can readjust the sliders to your likings at any time and the graph will recalculate the amounts.
 
+## Tech
+
+*Used:* IntelliJ, JavaFX, Maven, Java 11
+
 ![Renteapp](https://i.imgur.com/Q4a6u3C.png)
+
 
 
 

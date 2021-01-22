@@ -48,14 +48,17 @@ public class RenteApp extends Application {
 
             @Override
             public void changed(ObservableValue<? extends Number> observableValue, Number oldValue, Number newValue) {
-                spaarValue.setText(String.format("%.2f", newValue));
+
+                final double valueAfgerond = Math.floor(newValue.doubleValue() / 7.50 ) * 7.50;
+                spaarSlider.valueProperty().set(valueAfgerond);
+                spaarValue.setText(String.format("%.2f", valueAfgerond));
 
                 dataSpaar.getData().clear();
 
                 for (double i = 0; i <= 30; i++) {
-
                     Double som = (Double) newValue * 12 * i;
                     dataSpaar.getData().add(new XYChart.Data(i, som));
+
                 }
             }
         });
